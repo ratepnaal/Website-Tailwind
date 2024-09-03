@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+    <link rel="stylesheet" href="./dist/style.css">
+    <script src="Tailwind.js"></script>
+    
+</head>
+<body class="bg-slate-600 font-semibold ">
+<nav class="container mx-auto p-6"> 
+<div class="flex item-center justify-between">
+    <div>
+        <img src="./dist/images/tailwindcss-logo.svg"alt="Tailwind Logo" width="200px">
+    </div>
+        <div class=" hidden md:flex space-x-6 transition duration-700 ease-in">
+            <a href="#" class="text-slate-900 hover:text-orange-500 mt-1 transition-all duration-300 ease-in-out hover:scale-110  " >Portofolio</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 mt-1 transition-all duration-300 ease-in-out hover:scale-110" >About</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 mt-1 transition-all duration-300 ease-in-out hover:scale-110" >Contact</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 mt-1 transition-all duration-300 ease-in-out hover:scale-110" >Social</a>
+            <a href="#" class="py-1  px-6 rounded-full text-white bg-orange-500 hover:bg-slate-900 transition-all duration-500 ease-in-out hover:scale-105  "> Call Me</a>
+    </div>
+<button id="mobile-btn" class="md:hidden">
+    <i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+<div class="md:hidden">
+    <div id="mobile-menu" class="absolute flex hidden flex-col items-center space-y-4 font-bold drop-shadow-lg border-gray-300 bg-gray-50 py-8 left-6 right-6 ">
+        <a href="#" >Portofolio</a>
+        <a href="#"  >About</a>
+        <a href="#"  >Contact</a>
+        <a href="#"  >Social</a>
+        <a href="#" class="py-1  px-6 rounded-full text-white bg-orange-500 hover:bg-slate-900 "> Call Me</a>
+    </div>
+</div>
+</nav>
+<section class="hero">
+<div class="container px-6  mx-auto space-x-6  flex flex-col-reverse md:flex-row">
+        <div class=" md::w-1/2 flex flex-col space-y-5justify-center p-8 text-center md:text-left text-black">
+            <h1 class="font-bold text-3xl md:text-5xl p-10">Rapidly build modern websites without ever leaving your HTML.</h1>
+            <p class="p-5">A utility-first CSS framework packed with classes like flex, pt-4,
+                text-center and rotate-90 that can be composed to build any design, directly in your markup.</p>
+         <a href="#" class="self-center md:self-start py-1  px-6 rounded-full text-white bg-orange-500 hover:bg-slate-900  transition-all duration-500 ease-in-out hover:scale-105  "> Get Started</a>
+        </div>
+        <div class="w-1/2">
+            <img src="/dist/images/website logo.svg" alt="Tailwind Hero">
+        </div>
+    </section>
+    <section class="author">
+        <div class="container px-5 mx-auto my-32 text-center   ">
+            <h2 class="font-bold text-4xl ">“Best practices” don’t actually work.</h2>
+            <p class="mt-8 mx-auto max-w-5xl " >Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact.</p>
+           <div class="flex flex-col mt-11 space-x-0 space-y-10  md:flex-row md:space-y-0 md:space-x-5">
+            <div class="bg-slate-100 md:w-1/3 flex flex-col space-y-2 rounded-lg border border-slate-200 items-center">
+                <img src="./dist/images/adam.jpg" alt="Adam" class="w-16 rounded-full -mt-10">
+                <h5 class="font-bold text-lg text-slate-900">Adam Wathan</h5>
+                <p class="text-slate-900 text-sm leading-5 ">Because Tailwind is so low-level, it never encourages you to design the same site twice. Even with the same color palette and sizing scale, it's easy to build the same component with a completely different look in the next project.</p>
+            </div>
+            <!---/////-->
+            <div class="bg-slate-100 md:w-1/3 flex flex-col space-y-2 rounded-lg border border-slate-200 items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGD0BcxwuvdI1H-S35GmT43vP2MBIdCgyeIA&s" alt="Sam" class="w-16 rounded-full -mt-10">
+                <h5 class="font-bold text-lg text-slate-900">Sam Smith</h5>
+                <p class="text-slate-900 text-sm leading-5 ">I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain,
+                    but the truth is you’re never going to believe me until you actually try it.
+                    If you can suppress the urge to retch long enough to give it a chance.
+                     </p>
+            </div>
+            <!---///-->
+            <div class="bg-slate-100 md:w-1/3 flex flex-col space-y-2 rounded-lg border border-slate-200 items-center">
+                <img src="data:image/jpeg;base64,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" alt="alan" class="w-16 rounded-full -mt-10">
+                <h5 class="font-bold text-lg text-slate-900">Alan Swift</h5>
+                <p class="text-slate-900 text-sm leading-5 ">I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain,
+                    but the truth is you’re never going to believe me until you actually try it.
+                    If you can suppress the urge to retch long enough to give it a chance.</p>
+            </div>
+           </div>
+        </div>
+    </div>
+    </section>
+    <footer class="bg-gray-800">
+        <div class="container mx-auto px-5 py-10 text-white flex flex-col-reverse md:flex-row justify-between space-y-8 md:space-y-0 ">
+<div class="flex flex-col items-center justify-between space-y-8 md:space-y-5 md:items-start">
+    <div class="text-center mt-6 md:mt-0 ">
+        Copyright &copy; 2023, All Rights Reserved 
+    </div>
+    <div>
+        <img src="/dist/images/tailwindcss-logo.svg" alt="Logo" class="h-8">
+    </div>
+    <div class="flex space-x-4 ">
+        <a href="#"><i class="ri-facebook-line text-3xl"></i></a>
+        <a href="#"><i class="ri-instagram-line text-3xl"></i></a>
+        <a href="#"><i class="ri-linkedin-line text-3xl"></i></a>
+        <a href="#"><i class="ri-whatsapp-line text-3xl"></i></a>
+        <a href="#"><i class="ri-telegram-2-line text-3xl"></i></a>
+    </div>
+</div>
+<div class="flex justify-around space-x-32 ml-10">
+    <div class="flex flex-col space-y-2">
+        <a href="#" class="hover:text-slate-300">Home  </a>
+        <a href="#" class="hover:text-slate-300"> About </a>
+        <a href="#" class="hover:text-slate-300"> Contact </a>
+    </div>
+    <div class="flex flex-col space-y-2">
+        <a href="#" class="hover:text-slate-300"> Imprint</a>
+        <a href="#" class="hover:text-slate-300">Privacy</a>
+        <a href="#" class="hover:text-slate-300">Credits</a>
+    </div>
+</div>
+<div class="flex flex-col justify-between">
+    <form action="#">
+   <div class="flex space-x-3">
+    <input type="text" placeholder="Subscript to New" class="flex-1 py-2 px-6 rounded-full">
+    <button class="bg-slate-500 hover:bg-orange-500 rounded-full px-4 py-2" >Go</button>
+   </div>
+    </form> 
+</div> </div> 
+</footer>
+<script src="/dist/js/scripts.js"></script>
+</body>
+</html>
